@@ -10,32 +10,17 @@
 <div class="bg-gray-50 text-black/100 dark:bg-black dark:text-white/0">
 <div class="table-responsive">
     <h6>All registered 2024 Drivers</h6><br>
+    <label>Total:-{{{DB::table ('drivers')->count()}}}</label>
 
     
         <div class="row align-content-center">
             <form method="POST" action="">
                 <label class="form-label h-20">County:</label>
                 <select > 
-                <option> </option>
-                <option value="Naiobi">Nairobi</option>
-                <option value="Thika">Thika</option>
-                <option value="nakuru">Nakuru</option>
-                <option value="mombasa">Mombasa</option>
-                <option value="eldoret">Eldoret</option>
-                <option value="narok">Narok</option>
-                </select>
-                <label class="form-label h-20">Sub-county:</label>
-                <select > 
-                <option> </option>
-                <option value="Naiobi">Nairobi</option>
-                <option value="Thika">Thika</option>
-                <option value="nakuru">Nakuru</option>
-                <option value="mombasa">Mombasa</option>
-                <option value="eldoret">Eldoret</option>
-                <option value="narok">Narok</option>
-                </select>
-                <button class="btn btn-outline-info">Go...</button>
-                
+                    @foreach ($drivers as $location)
+                    <option value="{{$location->location}}">{{$location->location}}</option>
+                        
+                    @endforeach
             </form>
         </div>
 
@@ -47,31 +32,33 @@
             <th>Driver Name</th>
             <th>Email</th>
             <th>Phone Number</th>
+            <th>County</th>
         </tr>
         </thead>
         <tbody>
-            @foreach($drivers as  $driver)
+            @foreach($drivers as  $list)
             
             <tr>
                 <td class="py-1"> 
-                    {{$driver->id}}
+                    {{$list->id}}
                 </td>
                 <td>
-                    {{$driver->id_number}}
+                    {{$list->id_number}}
                 </td>
                 <td>
-                    {{$driver->name}}
-                </td>
-                <td>
-                    
-                        {{$driver->email}}
-                    
+                    {{$list->name}}
                 </td>
                 <td>
                     
-                    {{$driver->phone_number}}
+                        {{$list->email}}
+                    
+                </td>
+                <td>
+                    
+                    {{$list->phone_number}}
                 
             </td>
+            <td>{{$list->location}}</td>
             </tr>
         @endforeach
         </tbody>

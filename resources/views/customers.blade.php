@@ -9,7 +9,7 @@
 @section('content')
 <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
 <div class="table-responsive">
-    <h6>All registered 2024 customers</h6>
+    <h&nbsp;>All registered 2024 customers:-&nbsp; {{DB::table ('customers')->count()}} </h6>
     <div class="row align-content-center">
         <form method="POST" action="">
             <label class="form-label h-20">Date:</label> &nbsp;
@@ -37,6 +37,7 @@
             <th>Customer Name</th>
             <th>Email</th>
             <th>Phone Number</th>
+            <th>Location</th>
         </tr>
         </thead>
         <tbody>
@@ -44,7 +45,7 @@
             
             <tr>
                 <td class="py-1"> 
-                    {{$customer->id}}
+                    #{{$customer->id}}
                 </td>
                 <td>
                     {{$customer->id_number}}
@@ -62,6 +63,7 @@
                     {{$customer->phone_number}}
                 
             </td>
+            <td>{{$customer->location}}</td>
             </tr>
         @endforeach
         </tbody>
