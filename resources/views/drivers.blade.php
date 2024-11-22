@@ -7,9 +7,38 @@
                     <script src="{{asset('js/scripts.js')}}"></script>
 
 @section('content')
-<div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
+<div class="bg-gray-50 text-black/100 dark:bg-black dark:text-white/0">
 <div class="table-responsive">
-    <h6>All registered 2024 Drivers</h6>
+    <h6>All registered 2024 Drivers</h6><br>
+
+    
+        <div class="row align-content-center">
+            <form method="POST" action="">
+                <label class="form-label h-20">County:</label>
+                <select > 
+                <option> </option>
+                <option value="Naiobi">Nairobi</option>
+                <option value="Thika">Thika</option>
+                <option value="nakuru">Nakuru</option>
+                <option value="mombasa">Mombasa</option>
+                <option value="eldoret">Eldoret</option>
+                <option value="narok">Narok</option>
+                </select>
+                <label class="form-label h-20">Sub-county:</label>
+                <select > 
+                <option> </option>
+                <option value="Naiobi">Nairobi</option>
+                <option value="Thika">Thika</option>
+                <option value="nakuru">Nakuru</option>
+                <option value="mombasa">Mombasa</option>
+                <option value="eldoret">Eldoret</option>
+                <option value="narok">Narok</option>
+                </select>
+                <button class="btn btn-outline-info">Go...</button>
+                
+            </form>
+        </div>
+
     <table class="table table-striped table-hover">
         <thead>
         <tr>

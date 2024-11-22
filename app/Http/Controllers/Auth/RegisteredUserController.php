@@ -18,9 +18,12 @@ class RegisteredUserController extends Controller
      *
      * @return \Illuminate\View\View
      */
+    public function showRegisterForm(){
+        return view("auth.register");
+    }
     public function create()
     {
-        return view('auth.register');
+        return redirect()->route('auth.login');
     }
 
     /**
@@ -49,6 +52,6 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect(RouteServiceProvider::HOME);
+        return redirect('login');
     }
 }

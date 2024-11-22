@@ -7,9 +7,13 @@
                     <script src="{{asset('js/scripts.js')}}"></script>
 
 @section('content')
+@auth
+    
+
 <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
 <div class="table-responsive">
     <h6>Ride Requests as today </h6>
+   
     <table class="table table-striped table-hover">
         <thead>
         <tr>
@@ -49,4 +53,5 @@
     </table>
 </div>
 </div>
+@endauth 
 @endsection

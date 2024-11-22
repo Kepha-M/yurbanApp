@@ -7,10 +7,15 @@
 
     <!-- CSS Links-->
     <link href="{{asset('./css/styles.css')}}"/>
-    
+    <link rel="stylesheet" href="{{asset('build/assets/app-CM21Kgh1.css')}}">
 
-    {{-- <script src="{{asset('js/scripts.js')}}"></script> --}}
-    <script src="{{asset('./js/scripts.js')}}"></script>
+    <style>
+        .second-nav{
+            float: right;
+        }
+    </style>
+
+    <script src="{{asset('js/scripts.js')}}"></script>
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
             @vite(['resources/css/app.css', 'resources/js/app.js'])
         @else
@@ -23,46 +28,54 @@
 
 <body class="font-sans antialiased dark:bg-black dark:text-white/50 .bg-danger.bg-gradient ">
     <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
-        <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
+        <header class="grid grid-cols-12 items-center gap-2 py-10">
             
             @if (Route::has('login'))
-                <nav class="-mx-3 flex flex-1 justify-end" style="background-color: ebf8a4">
+                <nav class="-mx-310 flex flex-1 justify-center" style="background-color: ebf8a4">
                     @auth
+                    
                         <a
-                            href="{{ url('/dashboard') }}"
+                            href="{{ url('/') }}"
                             class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
                         >
                             Dashboard
                         </a>
+                        
+                          
+                            <a href="/rides" class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+                            >Rides</a>
+                            <a href="/drivers" class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+                            >Drivers</a>
+                            <a href="/customers" class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+                            >Customers</a>
+                            {{-- <a  href="{{('logout')}}" class="btn btn-outline-dark">Logout</a> --}}
+                            <form method="POST" action="{{ ('logout') }}">
+                                @csrf
+    
+                                <a class="btn btn-outline-info" :href="route('logout')"
+                                        onclick="event.preventDefault();
+                                                    this.closest('form').submit();">
+                                    {{ __('Log Out') }}
+                                </a>
+                            </form>
+                           
                     @endauth
-                </nav>
+                
             @endif
-            
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-               <div class="container-fluid">
-                <a  href="/" >Home</a>
-                <a href="/dashboard" class="btn-success nav-item">Dashboard</a>
-                <a href="/rides" class="btn-successnav-item">Rides</a>
-                <a href="/drivers" class="btn-success  nav-item">Drivers</a>
-                <a href="/customers" class="btn-success nav-item">Customers</a>
-               </div>
-            </nav>
+                </nav>
         </header>
     </div>
 
    
 
-    <div class="container">
+    <div class="container container-fluid">
         @yield('content')
     </div>
 
     {{-- Footer section --}}
-    <div >
-
-        <footer class="py-16 text-center text-sm text-black dark:text-white/70">
-            Yurban v{{ Illuminate\Foundation\Application::VERSION }}
-            {{-- *(PHP v{{ PHP_VERSION }})*/ --}}
-        </footer>
-    </div>
+    <footer class="py-16 text-center text-sm text-black dark:text-white/70">
+        Yurban v{{ Illuminate\Foundation\Application::VERSION }} ||  Copyright &copy; {{ date("Y") }} || <a href="https://www.linkedin.com/in/kephaondieki" target="_blank">Kepha Ondieki</a> 
+    </footer>
+</div>
 </body>
 </html>
