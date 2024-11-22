@@ -7,7 +7,7 @@ use App\Http\Controllers\RideController;
 use App\Http\Controllers\AuthController;
 
 use App\Http\Controllers\Auth\RegisteredUserController;
-use App\Models\Rides;
+use App\Models\Rides; 
 use App\Models\Customer;
 use App\Models\Driver;
 
