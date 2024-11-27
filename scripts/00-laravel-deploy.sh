@@ -21,6 +21,7 @@ php artisan route:cache
 echo " Building assets for production "
 npm install 
 npm run build
+composer run dev
 
 echo "Running migrations..."
 php artisan migrate --force
