@@ -25,4 +25,3 @@ npm run build
 echo "Running migrations..."
 php artisan migrate --force
 
-This is the deploy script for your Laravel
