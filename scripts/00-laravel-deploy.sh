@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
-
+composer global require hirak/prestissimo --ignore-platform-reqs
 
 echo "Running composer"
 composer update
-composer global require hirak/prestissimo
+#composer global require hirak/prestissimo
+
 
 echo "running Laravel"
 composer global require Laravel/laravel
