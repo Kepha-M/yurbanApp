@@ -25,8 +25,11 @@ Route::get('/', function () {
 Route::redirect('/userRegister','/auth.register');
 
 
-Route::get('/drivers', [DriverController::class, 'show'])->name('drivers');
-
+//Route::get('/drivers', [DriverController::class, 'show'])->name('drivers');
+Route::get('/drivers', function () {
+    
+    return view('drivers');
+});
 
 //Customers routes
 
