@@ -22,7 +22,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/register','/auth.register');
+Route::redirect('/userRegister','/auth.register');
 
 
 Route::get('/drivers', [DriverController::class, 'show'])->name('drivers');
