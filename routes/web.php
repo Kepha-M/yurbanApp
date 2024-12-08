@@ -15,14 +15,17 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 
 Route::get('/', function () { 
-//    if (Auth::check()){
+ if (Auth::check()){
         return view('/welcome');
- //   }
-   // return view('auth.login');
+    }
+   return view('auth.login');
 });
 
 
-Route::redirect('/userRegister','/auth.register');
+Route::get('/register',function()
+                {
+                return view(auth.register');
+                });
 
 
 //Route::get('/drivers', [DriverController::class, 'show'])->name('drivers');
