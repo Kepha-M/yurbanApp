@@ -85,7 +85,7 @@ return [
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => 'postgresql://yurban_database_user:uzfECzfZQoUMuFdUzsjARsmdomfOTDKT@dpg-ctaiip56l47c73bmrqm0-a.oregon-postgres.render.com/yurban_database',
-            'host' => 'dpg-ctaiip56l47c73bmrqm0-a,
+            'host' => 'dpg-ctaiip56l47c73bmrqm0-a',
             'port' => '5432',
             'database' => 'yurban_database',
             'username' => 'yurban_database_user',
