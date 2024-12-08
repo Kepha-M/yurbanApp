@@ -59,7 +59,7 @@
                 
             </div>
             <div class="text-center mt-4 font-weight-light">
-                New here? <a href="{{route('/register')}}" class="text-primary">Create account</a>
+                New here? <a href="{{route('register')}}" class="text-primary">Create account</a>
             </div>
             </div>
         </form>
