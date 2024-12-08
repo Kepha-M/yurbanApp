@@ -1,4 +1,4 @@
-<?php
+//<?php
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DriverController;
@@ -15,10 +15,10 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 
 Route::get('/', function () { 
-    if (Auth::check()){
+//    if (Auth::check()){
         return view('/welcome');
-    }
-    return view('auth.login');
+ //   }
+   // return view('auth.login');
 });
 
 
