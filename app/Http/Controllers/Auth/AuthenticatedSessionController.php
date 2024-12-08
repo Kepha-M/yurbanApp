@@ -33,7 +33,7 @@ class AuthenticatedSessionController extends Controller
         $request->session()->regenerate();
 
 
-        return view('/welcome');
+        return redirect('./welcome');
     }
 
     /**
