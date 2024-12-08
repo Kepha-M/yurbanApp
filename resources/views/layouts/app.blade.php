@@ -8,7 +8,7 @@
     <!-- CSS Links-->
     <link href="{{asset('./css/styles.css')}}"/>
     <link rel="stylesheet" href="{{asset('build/assets/app-CM21Kgh1.css')}}">
-
+<link href=”https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css” rel=”stylesheet” integrity=”sha384-rGc5a4CZNrDyZM96D/AJLHaaLgMQp8rCw+3Mi6lO2eNg6bPqfgJInQFnZlA1a11K” crossorigin=”anonymous”>
     <style>
         .second-nav{
             float: right;
