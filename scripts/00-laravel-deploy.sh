@@ -27,3 +27,5 @@ echo "Running migrations..."
 php artisan migrate --force
 echo "seeding database "
 php artisan db:seed
+echo "List of routes"
+php artisan route:list
