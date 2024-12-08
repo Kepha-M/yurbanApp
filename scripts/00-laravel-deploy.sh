@@ -25,4 +25,5 @@ composer run dev
 
 echo "Running migrations..."
 php artisan migrate --force
-
+echo "seeding database "
+php artisan db:seed
