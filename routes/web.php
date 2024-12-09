@@ -28,8 +28,8 @@ Route::get('/register',function()
                 });
 
 
-//Route::get('/drivers', [DriverController::class, 'show'])->name('drivers');
-Route::get('/drivers', function () {
+Route::get('/drivers', [DriverController::class, 'show'])->name('drivers');
+//Route::get('/drivers', function () {
     
     return view('/drivers');
 });
