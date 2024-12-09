@@ -8,6 +8,7 @@ use App\Models\Driver;
 class DriverController extends Controller
 {
     //view all divers
+    dd('Controller reached!!');
     public function show()
     {
      
