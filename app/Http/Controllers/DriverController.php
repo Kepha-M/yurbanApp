@@ -12,7 +12,7 @@ class DriverController extends Controller
     public function show()
     {
      dd('reached');
-        return view('drivers');
+        return view('/drivers');
     }
     //
     public function showRegistrationForm()
