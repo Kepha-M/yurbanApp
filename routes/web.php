@@ -5,6 +5,7 @@ use App\Http\Controllers\DriverController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\RideController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
 
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Models\Rides; 
@@ -14,12 +15,12 @@ use App\Models\Driver;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 
-Route::get('/', function () { 
+//Route::get('/', function () { 
 // if (Auth::check()){
-        return view('/welcome');
+//        return view('/welcome');
  //   }
   // return view('auth.login');
-});
+//});
 
 
 Route::get('/register',function()
@@ -27,7 +28,7 @@ Route::get('/register',function()
                 return redirect('auth.register');
                 });
 
-
+Route::get('/', [HomeController::class, 'index'])->name('welcome');
 Route::get('/drivers', [DriverController::class, 'show'])->name('drivers');
 //Route::get('/drivers', function () {
     
