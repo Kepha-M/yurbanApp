@@ -12,7 +12,7 @@ class DriverController extends Controller
     {
        $drivers = Driver::all();
 
- return view('drivers', compact($drivers));
+ return view('drivers', compact(drivers));
         
     }
     //
