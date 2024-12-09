@@ -39,9 +39,9 @@ by<!DOCTYPE html>
         <header class="grid grid-cols-12 items-center gap-2 py-10">
             
             
-            @if (Route::has('login'))
+            <!--@if (Route::has('login'))-->
                 <nav class="-mx-310 flex flex-1 justify-center" style="background-color: ebf8a4">
-                    @auth
+                    <!--@auth-->
                     <div>
                         <nav
   class="relative flex w-full flex-wrap items-center justify-between bg-zinc-50 py-2 shadow-dark-mild dark:bg-neutral-700 lg:py-4">
@@ -77,9 +77,9 @@ by<!DOCTYPE html>
                                 </a>
                             </form>
                            
-                    @endauth
+                  <!--  @endauth-->
                 
-            @endif
+           <!-- @endif-->
                 </nav>
         </header>
     </div>
