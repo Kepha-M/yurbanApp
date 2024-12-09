@@ -12,11 +12,14 @@ composer global require Laravel/laravel
 echo "generating application key..."
 php artisan key:generate --show
 
-echo "Caching config..."
-php artisan config:cache
-
 echo "Caching routes..."
+php artisan config:clear
+php artisan route:clear
+php artisan view:clear
+php artisan cache:clear
 php artisan route:cache
+php artisan config:cache
+php artisan view:cache
 
 echo " Building assets for production "
 npm install 
