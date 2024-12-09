@@ -10,9 +10,9 @@ class DriverController extends Controller
     //view all divers
     public function show()
     {
-      //  $drivers = Driver::all();
+       $drivers = Driver::all();
 
- return view('drivers');
+ return view('drivers', compact($drivers);
         
     }
     //
