@@ -51,7 +51,7 @@
                                 {{DB::table ('drivers')->count()}}
                             </span>
                           </button><br>
-                          <a href="drivers" @class(['p-4', 'font-bold' => true])>Details</a>
+                          <a href="{{drivers}}" @class(['p-4', 'font-bold' => true])>Details</a>
                                     </div>
                                 </div>
                             </div>
