@@ -31,7 +31,7 @@ Route::get('/register',function()
 //Route::get('/drivers', [DriverController::class, 'show'])->name('drivers');
 Route::get('/drivers', function () {
     
-    return view('drivers');
+    return view('/drivers');
 });
 
 //Customers routes
