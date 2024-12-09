@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Redirect;
 
 Route::get('/', function () { 
 // if (Auth::check()){
-        return view('/drivers');
+        return view('/welcome');
  //   }
   // return view('auth.login');
 });
