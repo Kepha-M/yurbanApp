@@ -10,10 +10,8 @@ class DriverController extends Controller
     //view all divers
     public function show()
     {
-       $drivers = Driver::all();
-
- return view('drivers', compact(drivers)->name('drivers');
-        
+     
+        return view('drivers');
     }
     //
     public function showRegistrationForm()
