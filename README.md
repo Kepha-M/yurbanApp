@@ -13,9 +13,7 @@ To deploy the project locally, simply follow the following steps:
 6. Ensure you have Composer and appropriate PHP version is installed. 
 
    You are ready to go.......Happy coding.
-KEPHA MARASI || The Bug...
-Contact: 0707362926
-Mail: thecloud79@gmail.com 
+| The Bug
 
 
 ## License
